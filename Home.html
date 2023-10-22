@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Home Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        .navbar-brand .navText{
+            font-size: 26px;
+            font-weight: 800;
+            color: #0C8CD3;
+        }
+
+        .nav-link{
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .header1{
+            background:url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvczkwLXBhLTE3NTIuanBn.jpg') no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 500px;
+        }
+
+        .header1 .text{
+            width: 550px;
+            height: 400px;
+            margin-top: 10px;
+            padding-top: 50px;
+            float: right;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .text .p1{
+            color: #0A2945;
+            font-size: 40px;
+            font-weight: 800;
+            margin-right: 20px;
+            text-align: right;
+        }
+
+        .text .p2{
+            color: #0A2945;
+            padding-top: 10px;
+            font-size: 22px;
+            font-weight: 600;
+            margin-right: 20px;
+            text-align: right;
+        }
+
+        .btn-outline-primary{
+            padding-top: 5px;
+            margin-top: 15px;
+            margin-right: 20px;
+            margin-left: 20px;
+            width: 150px;
+            height: 40px;
+            border-radius: 15px;
+            color: #0A2945;
+            border: 2px solid #0A2945;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .header2{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 300px;
+            margin-top: 0px auto;
+            padding: 10px; 
+            background-color: #81b8f7;
+            align-items: center;
+        }
+
+        .header2 .box{
+            width: 200px;
+            height: 200px;
+            float:left;
+            justify-content: center;
+            margin:20px 10px;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+            border: 5px solid white;
+            transition: 1s;
+        }
+
+        .box:hover{
+            background: #f8fafc; 
+            cursor: pointer;
+            z-index: 2;
+            transform: scale(1.1);
+        }
+
+        .box .boxImg{
+            width: 80px;
+            height: 80px;
+            margin: 5% 25%;
+        }
+
+        .box .p3{
+            padding: 10px;
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+            color: #0A2945;
+        }
+
+        .about{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 600px;
+            margin-top: 0px auto;
+            padding: 10px; 
+            background-color: #5390b3;
+            align-items: center;
+        }
+        
+        .aboutBox{
+            width: 600px;
+            height: 550px;
+            float:left;
+            justify-content: center;
+            margin:20px 20px;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+            transition: 1s;
+        }
+
+        .aboutBox .text1{
+            margin-top: 5px;
+            padding: 10px;
+            align-items: left;
+            justify-content: center;
+            color: #0A2945;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .aboutBox .text2{
+            margin-top: 5px;
+            padding: 10px;
+            align-items: center;
+            justify-content: left;
+            color: #0A2945;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .aboutBox .text3{
+            width: 250px;
+            height: 150px;
+            float:left;
+            justify-content: center;
+            color: #0A2945;
+            font-size: 16px;
+            font-weight: 400;
+            margin:10px 10px;
+            padding: 10px;
+        }
+
+        .service{
+            flex-wrap: wrap;
+            width: 100%;
+            height: 750px;
+            margin-top: 0px auto;
+            padding: 10px; 
+            background-color: #81b8f7;
+        }  
+
+        .service h1{
+            margin-left: 40px;
+        }
+
+        .service hr{
+            margin-left: 40px;
+        }
+
+        .service .serviceBox{
+            width: 400px;
+            height: 250px;
+            float:left;
+            justify-content: center;
+            margin:20px 20px;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+            border: 5px solid white;
+            transition: 1s;
+        }
+
+        .serviceBox:hover{
+            cursor: pointer;
+            background-color: #22b6ca;
+            z-index: 2;
+        }
+
+        .serviceBox .boxImg{
+            width: 80px;
+            height: 80px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .serviceBox .p3{
+            padding: 10px;
+            font-weight: 800;
+            font-size: 25px;
+            text-align: center;
+            color: #0A2945;
+        }
+
+        .serviceBox h4{
+            font-size: 16px;
+            text-align: center;
+            color: #0A2945;
+        }
+
+        .btn-primary{
+            padding-top: 5px;
+            margin-top: 15px;
+            align-items: center;
+            width: 150px;
+            height: 40px;
+            border-radius: 15px;
+            color: #0A2945;
+            border: 2px solid #0A2945;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .booking{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 650px;
+            margin-top: 0px auto;
+            padding: 10px; 
+            background-color: #5390b3;
+            align-items: center;
+        }
+        
+        .bookingBox{
+            width: 600px;
+            height: 550px;
+            float:left;
+            justify-content: center;
+            margin:20px 20px;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+            transition: 1s;
+        }
+
+        .bookingBox .text1{
+            margin-top: 5px;
+            padding: 10px;
+            align-items: left;
+            justify-content: center;
+            color: #0A2945;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .bookingBox .text2{
+            margin-top: 5px;
+            padding: 10px;
+            align-items: center;
+            justify-content: left;
+            color: #0A2945;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .bookingBox .text3{
+            width: 550px;
+            height: 200px;
+            float:left;
+            justify-content: center;
+            color: #0A2945;
+            font-size: 16px;
+            font-weight: 400;
+            margin:20px 10px;
+            padding: 10px;
+        }
+
+        .text3 .container .col{
+            text-align: center;
+            height: 50px;
+            color: #0A2945;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .btn-info{
+            background-color: #0A2945;
+            width: 100px;
+            height: 40px;
+            color: white;
+        }
+
+        .review{
+            flex-wrap: wrap;
+            width: 100%;
+            height: 500px;
+            margin-top: 0px auto;
+            padding: 10px; 
+            background-color: #81b8f7;
+            align-items: center;
+        }
+
+        .review h1{
+            margin-left: 40px;
+        }
+
+        .review hr{
+            margin-left: 40px;
+        }
+
+        .reviewBox{
+            width: 400px;
+            height: 300px;
+            float:left;
+            justify-content: center;
+            margin:20px 20px;
+            padding: 20px;
+            border-radius: 10px;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        .reviewBox .p3{
+            padding: 10px;
+            font-weight: 800;
+            font-size: 25px;
+            text-align: center;
+            color: #0A2945;
+        }
+
+        .reviewBox h4{
+            font-size: 16px;
+            text-align: center;
+            color: #0A2945;
+        }
+
+        .footer{
+            flex-wrap: wrap;
+            width: 100%;
+            height: 500px;
+            margin-top: 0px auto;
+            padding: 10px; 
+            background-color: #5390b3;
+            align-items: center;
+        }
+        
+        .footerBox{
+            width: 300px;
+            height: 400px;
+            float:left;
+            justify-content: center;
+            margin:20px 10px;
+            padding: 10px;
+            border-radius: 10px;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        .footerBox .text1{
+            margin-top: 5px;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+            color: #0A2945;
+            font-size: 30px;
+            font-weight: 800;
+        }
+        
+        .footerBox .text1 .img{
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .footerBox .text2{
+            margin-top: 5px;
+            padding: 10px;
+            align-items: center;
+            justify-content: left;
+            color: #0A2945;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .footerBox .ul{
+            list-style: none;
+        }
+
+        .footerBox .text3{
+            text-align: center;
+            color: #0A2945;
+            font-size: 20px;
+            font-weight: 400;
+            margin:20px 10px;
+            padding: 10px;
+        }
+    /*Responsive Part*/
+        /*Nav bar Responsive*/
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #navList {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .toggle-button {
+            display: none;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .toggle-button {
+                display: block;
+            }
+            #navList {
+                display: none;
+            }
+            .nav-links-active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /*Nav bar Responsive*/
+
+        /*Header Responsive*/
+        @media (max-width: 768px) {
+            .text .p1 {
+                font-size: 24px;
+            }
+    
+            .text .p2 {
+                font-size: 14px;
+            }
+    
+            .btn {
+                font-size: 14px;
+                padding: 8px 16px;
+                margin-top: 15px;
+            }
+        }
+        /*Header Responsive*/
+
+        /*Service Responsive*/
+        @media (max-width: 768px) {
+            .service .box {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        .box:hover {
+            background: #f8fafc;
+            cursor: pointer;
+            z-index: 2;
+            transform: scale(1.1);
+        }
+
+        .box .boxImg {
+            width: 80px;
+            height: 80px;
+            margin: 5% 25%;
+        }
+
+        .box .p3 {
+            padding: 10px;
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+            color: #0A2945;
+        }
+
+        
+        /*Service Responsive*/
+    /*Responsive Part*/    
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: #0A2945;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <div class="navText"><img src="pngwing.com.png" alt="" width="40" height="42" class="d-inline-block align-text-top">
+                MEDICARE</div>
+            </a>
+            <button class="toggle-button" id="toggleButton">☰</button>
+            <ul class="nav justify-content-center" id="navList">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BOOK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">REVIEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ADMIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header1">
+        <div class="text">
+            <div class="p1">We Take Care Of Your<br>Healthy Health</div>
+            <div class="p2">Excellent health service for all patient who come to our hospital.</div>
+            <a href="#">
+                <button type="button" class="btn btn-outline-primary">Learn More</button>
+            </a>    
+        </div>
+    </div>
+
+    <div class="header2">
+        <div class="box">
+            <img class="boxImg" src="img_2.png" >
+            <div class="p3">Qualified Doctors</div>
+        </div>
+        <div class="box">
+            <img class="boxImg" src="img_3.png">
+            <div class="p3">Emergency Care</div>
+        </div>
+        <div class="box">
+            <img class="boxImg" src="img_4.png">
+            <div class="p3">24 Hours Service</div>
+        </div>
+        <div class="box">
+            <img class="boxImg" src="img_5.png">
+            <div class="p3">Newest Technologies</div>
+        </div>
+        <div class="box">
+            <img class="boxImg" src="img_6.png">
+            <div class="p3">Online Appoinment</div>
+        </div>
+        <div class="box">
+            <img class="boxImg" src="img_7.png">
+            <div class="p3">Laboratory Test</div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="aboutBox">
+            <div class="text1">
+                <h1>ABOUT US</h1>
+                <hr>
+                We Collaborate for Better Healthcare
+            </div>
+            <div class="text2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utm elit tellus, luctus nec ullamcorper mattis.
+            </div>
+            <div class="text3">
+                <h3>Our Vision</h3>
+                We never get behind of the latest medical trends. Lorem ipsum dolor sit, consectetur.
+            </div>
+            <div class="text3">
+                <h3>Our Mission</h3>
+                The most interesting hospital in the world. Lorem ipsum dolor sit, consectetur.
+            </div>
+            <a href="#">
+                <button type="button" class="btn btn-outline-primary">Learn More</button>
+            </a>
+        </div>
+        <div class="aboutBox">
+            <img src="https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="550px" height="500px">
+        </div>   
+    </div>
+
+    <div class="service">
+        <h1>OUR SERVICES</h1>
+        <hr>
+        <a href="#">
+        <div class="serviceBox">
+            <img class="boxImg" src="img_8.png">
+            <div class="p3">Psychiatry</div>
+            <h4>Lorem ipsum dolor sit, consectetur.</h4>
+        </div>
+    </a>
+        <div class="serviceBox">
+            <img class="boxImg" src="img_9.png" >
+            <a href="#"><div class="p3">Neurology</div></a>
+            <h4>Lorem ipsum dolor sit, consectetur.</h4>
+        </div>
+        <div class="serviceBox">
+            <img class="boxImg" src="img_10.png" >
+            <a href="#"><div class="p3">VOG</div></a>
+            <h4>Lorem ipsum dolor sit, consectetur.</h4>
+        </div>
+        <div class="serviceBox">
+            <img class="boxImg" src="img_11.png" >
+            <a href="#"><div class="p3">Dentist</div></a>
+            <h4>Lorem ipsum dolor sit, consectetur.</h4>
+        </div>
+        <div class="serviceBox">
+            <img class="boxImg" src="img_12.png" >
+            <a href="#"><div class="p3">Cardiology</div></a>
+            <h4>Lorem ipsum dolor sit, consectetur.</h4>
+        </div>
+        <div class="serviceBox">
+            <img class="boxImg" src="img_13.png" >
+            <a href="#"><div class="p3">Urology</div></a>
+            <h4>Lorem ipsum dolor sit, consectetur.</h4>
+        </div>    
+    </div>
+
+    <div class="booking">
+        <div class="bookingBox">
+            <img src="https://images.pexels.com/photos/7195369/pexels-photo-7195369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="550px" height="500px">
+        </div>
+        <div class="bookingBox">
+            <div class="text1">
+                <h1>WORKING HOURS</h1>
+                <hr>
+                Healthcare at Its Finest
+            </div>
+            <div class="text2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+            </div>
+            <div class="text3">
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        Mon to Fri
+                      </div>
+                      <div class="col">
+                        7.00 - 11.00 P.M.
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <button type="button" class="btn btn-info">Book</button>
+                        </a> 
+                      </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        Sat to Sun
+                      </div>
+                      <div class="col">
+                        4.00 - 10.00 P.M.
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <button type="button" class="btn btn-info">Book</button>
+                        </a> 
+                      </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        Sun
+                      </div>
+                      <div class="col">
+                        8.00 - 11.00 A.M.
+                      </div>
+                      <div class="col">
+                        <a href="#">
+                            <button type="button" class="btn btn-info">Book</button>
+                        </a> 
+                      </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <div class="review">
+        <h1>OUR PATIENTS SAYS</h1>
+        <hr>
+        <div class="reviewBox">
+            <img class="boxImg" src="img_8.png">
+            <div class="p3">Lloyd Wilson</div>
+            <h4>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            </h4>
+        </div>
+        <div class="reviewBox">
+            <img class="boxImg" src="img_8.png">
+            <div class="p3">Ian Smith</div>
+            <h4>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            </h4>
+        </div>
+        <div class="reviewBox">
+            <img class="boxImg" src="img_8.png">
+            <div class="p3">Rachel Parker</div>
+            <h4>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            </h4>
+        </div>
+        <a href="#">
+            <button type="button" class="btn btn-info">Book</button>
+        </a> 
+    </div>
+                
+    <div class="footer">
+        <div class="footerBox">
+            <div class="text1">
+                <img src="pngwing.com.png" alt="" width="40" height="42" class="d-inline-block align-text-top">
+                MEDICARE
+            </div>
+            <div class="text2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+            </div>
+            <img class="img" src="img_14.png" width="40px" height="40px">
+            <img class="img" src="img_15.png" width="40px" height="40px">
+            <img class="img" src="img_16.png" width="40px" height="40px">
+        </div>
+        <div class="footerBox">
+            <div class="text1">
+                Links
+            </div>
+            <div class="text2">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Services</li>
+                    <li>Book</li>
+                    <li>Review</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBox">
+            <div class="text1">
+                Services
+            </div>
+            <div class="text2">
+                <ul>
+                    <li>FAQs</li>
+                    <li>Doctors</li>
+                    <li>Packages</li>
+                    <li>System Login</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerBox">
+            <div class="text1">
+                Have a Questions?
+            </div>
+            <div class="text2">
+                <ul>
+                    <li>203, Kandy Road, Colombo, Sri Lanka</li>
+                    <li>0112 564791</li>
+                    <li>info@medicare.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text3">
+            <hr>
+            Copyright © 2023 All rights reserved | This template is made with medicare desgin unit
+        </div>
+    </div>              
+    
+    <script src="Main.js"></script>
+</body>
+</html>
